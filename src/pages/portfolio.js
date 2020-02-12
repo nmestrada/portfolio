@@ -9,7 +9,10 @@ import { FaGithub } from "react-icons/fa"
 import Fade from "react-reveal/Fade"
 //Components
 // import Video from "../components/Video"
+import {Card} from 'react-bootstrap'
 
+//styling
+import '../stylesheets/portfolio.css'
 //images
 import beerHopper1 from "../images/beerHopper1.png"
 import weJay1 from "../images/weJay1.png"
@@ -24,22 +27,21 @@ import plantify4 from "../images/plantify4.jpg"
 const Portfolio = () => (
   <Layout>
     {/* <SEO title="Home" /> */}
-    <div className="projects">
-      <Fade bottom>
-        <div className="weJay">
-          <div className="section-title">
+    <div className="projects-container">
+        <Card className="project weJay">
+          <Fade bottom>
+          <Card.Header className="section-title">
             <h3 className="project-title">weJay</h3>
             <h3 className="icons">
               <a
-                style={{ color: "white" }}
                 href="https://github.com/weJayCapstone/weJay"
                 target="_blank"
               >
                 Github <FaGithub style={{ "margin-right": "0.5rem" }} />
               </a>
             </h3>
-          </div>
-          <div className="section-content">
+          </Card.Header>
+          <Card.Body className="section-content">
             <p>
               Node.js, React Native, Expo SDK, Google Firestore, Spotify API
             </p>
@@ -55,16 +57,15 @@ const Portfolio = () => (
               on songs that would played next on the party playlist!
             </p>
             <p>Check our weJay video!</p>
-          </div>
-        </div>
-      </Fade>
-      <Fade bottom>
-        <div className="beerHopper">
-          <div className="section-title">
+        </Card.Body>
+        </Fade>
+        </Card>
+        <Card className="project beerHopper">
+            <Fade bottom>
+          <Card.Header className="section-title">
             <h3 className="project-title">BeerHopper</h3>
             <h3 className="icons">
               <a
-                style={{ color: "white" }}
                 href="https://beerhopperfullstack.herokuapp.com/beers"
                 target="_blank"
               >
@@ -72,7 +73,6 @@ const Portfolio = () => (
               </a>
               -
               <a
-                style={{ color: "white" }}
                 href="https://github.com/TeamForLoops/beerHopper"
                 target="_blank"
               >
@@ -80,8 +80,8 @@ const Portfolio = () => (
                 Github <FaGithub />
               </a>
             </h3>
-          </div>
-          <div className="section-content">
+          </Card.Header>
+          <Card.Body className="section-content">
             <p>
               Node.js, React, Redux, Sequelize, PostgreSQL, Express, React
               Bootstrap
@@ -89,17 +89,16 @@ const Portfolio = () => (
             <img src={beerHopper1}></img>
             <p>1 of 4 Full Stack Developers</p>
             <p>An e-commerce site built in a week and half sprint</p>
-          </div>
-        </div>
-      </Fade>
-      <Fade bottom>
-        <div className="plantify">
-          <div className="section-title">
+          </Card.Body>
+          </Fade>
+        </Card>
+        <Card className="project plantify">
+            <Fade bottom>
+          <Card.Header className="section-title">
             <h3 className="project-title">Plantify</h3>
             <h3 className="icons">
               {" "}
               <a
-                style={{ color: "white" }}
                 href="https://github.com/nmestrada/Plantify"
                 target="_blank"
               >
@@ -107,8 +106,8 @@ const Portfolio = () => (
                 Github <FaGithub />
               </a>
             </h3>
-          </div>
-          <div className="section-content">
+          </Card.Header>
+          <Card.Body className="section-content">
             <p>Node.js, React Native, Google Firestore, ExpoSDK, Clarfai API</p>
             <div className="images">
               <img src={plantify1}></img>
@@ -121,9 +120,9 @@ const Portfolio = () => (
               photo
             </p>
             <p>Used API with a custom trained ML photo recognition API</p>
-          </div>
-        </div>
-      </Fade>
+          </Card.Body>
+          </Fade>
+        </Card>
     </div>
     <Link to="/">Home</Link>
   </Layout>

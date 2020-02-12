@@ -1,21 +1,26 @@
 import React from "react"
 //import { Link, graphql } from "gatsby"
-import headshot from "../images/headshoticon1.jpg"
+//bootstrap import
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {Card} from 'react-bootstrap'
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import Fade from "react-reveal/Fade"
+import Container from 'react-bootstrap/Container'
+
+import '../stylesheets/index.css'
 
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" />
-    <div className="about-me">
+    <Card className="about-me border-0">
       <Fade bottom>
-        <div className="section-title">
-          <h2>About Me</h2>
-        </div>
-        <div className="section-content">
+        <Card.Header className="section-title border-0">
+          <h4>About Me</h4>
+        </Card.Header>
+        <Card.Body className="section-content">
           <p>
             I started my career in customer service as a supervisor at
             Starbucks. Now I'm looking to transition to Software Engineering.
@@ -37,9 +42,9 @@ const IndexPage = ({ data }) => (
             My Hobbies include: Argentine Tango dancing, gardening and
             watercolor painting
           </p>
-        </div>
+        </Card.Body>
       </Fade>
-    </div>
+    </Card>
   </Layout>
 )
 

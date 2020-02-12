@@ -1,0 +1,14 @@
+.headshot {
+    margin: auto;
+    max-width: 10rem;
+    display: flex;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 255, .2);
+}
+.links {
+    display:flex;
+    justify-content: space-between;
+}
+
+a {
+    margin: 0.4rem;
+}

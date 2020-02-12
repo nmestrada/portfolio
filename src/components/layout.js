@@ -12,6 +12,8 @@ import { useStaticQuery, graphql } from "gatsby"
 import Navbar from "./Navbar"
 import "./layout.css"
 
+import Container from 'react-bootstrap/Container'
+
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -24,7 +26,7 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+    <Container>
       <Navbar siteTitle={data.site.siteMetadata.title} />
       <div
         style={{
@@ -41,12 +43,12 @@ const Layout = ({ children }) => {
           </div>
         </footer>
       </div>
-    </>
+    </Container>
   )
 }
 
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
+// Layout.propTypes = {
+//   children: PropTypes.node.isRequired,
+// }
 
 export default Layout
