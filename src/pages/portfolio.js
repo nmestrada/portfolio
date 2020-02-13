@@ -37,7 +37,7 @@ const Portfolio = () => (
                 href="https://github.com/weJayCapstone/weJay"
                 target="_blank"
               >
-                Github <FaGithub style={{ "margin-right": "0.5rem" }} />
+                Github <FaGithub/>
               </a>
             </h3>
           </Card.Header>

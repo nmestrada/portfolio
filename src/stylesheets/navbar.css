@@ -1,3 +1,6 @@
+*{
+    font-family: Courier;
+}
 .headshot {
     margin: auto;
     max-width: 10rem;

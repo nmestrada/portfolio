@@ -21,15 +21,15 @@ export default function Navb() {
         <Nav className="links mx-auto">
           <Link to="/">About</Link>
           <Link to="portfolio">Portfolio</Link>
-          <Link href="https://github.com/nmestrada" target="_blank">
+          <a href="https://github.com/nmestrada" target="_blank">
             <FaGithub />
-          </Link>
-          <Link
+          </a>
+          <a
             href="https://www.linkedin.com/in/natalie-estrada-dev/"
             target="_blank"
           >
             <FaLinkedin />
-          </Link>
+          </a>
         </Nav>
       </Navbar>
     </Container>
