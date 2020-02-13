@@ -25,7 +25,8 @@
 .section-title {
     display: flex;  
     color: black;
-    border:none
+    border:none;
+    justify-content: space-between;
 }
 a {
     color: black;
