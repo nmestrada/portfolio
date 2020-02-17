@@ -9,8 +9,8 @@
 .project {
     max-height: 50rem;
     margin-bottom: 2rem;
-    box-shadow: 2px 2px 2px 2px rgba(100, 100, 105, 0.2);
-    background-color:rgba(255, 255, 255, 0.2);
+    box-shadow: 2px 2px 2px 2px rgba(100, 100, 105, 1);
+    background-color:rgba(255, 255, 255, 0.7);
 }
 .images {
     margin: auto;
@@ -31,6 +31,8 @@
 a {
     color: black;
 }
-a:hover {
+/* a:hover {
     color: lightseagreen;
-}
+    text-decoration: none;
+    font-family: Courier;
+} */
