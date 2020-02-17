@@ -36,3 +36,10 @@ a {
     text-decoration: none;
     font-family: Courier;
 } */
+@media only screen and (max-width: 480px) {
+    .section-title{
+        flex-wrap: wrap;
+    }
+
+  }
+  
