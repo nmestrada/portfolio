@@ -7,7 +7,7 @@ import headshot from "../images/headshoticon1.jpg"
 import '../stylesheets/header.scss'
 
 const Header = () => (
-    <Container id="page-header" fluid className="my-4">
+    <Container id="page-header" fluid >
         <Image className="headshot" src={headshot} roundedCircle/>
         <div className="blurb my-4">
             <h2 className="text-center">Natalie Estrada</h2>
