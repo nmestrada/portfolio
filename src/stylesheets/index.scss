@@ -1,0 +1,56 @@
+/*Font imports*/
+@import url('https://fonts.googleapis.com/css?family=Mukta&display=swap');
+/*global variables*/
+$background-color:#D3C0CD;
+$primary-font: Mukta;
+$primary-font-color: rgb(3, 38, 71); 
+$secondary-font-color: #B76D68;
+$link-hover-primary-color:rgba(206, 100, 116, 1);
+$link-hover-secondary-color: #9DA39A;
+
+
+/* home page styles */
+*{
+    font-family: $primary-font;
+}
+h1, h2, h3,h4 {
+    font-family: $primary-font;
+    color: $primary-font-color;
+}
+body {
+    background-color: $background-color;
+    font-family: $primary-font;
+    margin:auto;
+    padding:0;
+}
+/* .underline--magical {
+   
+} */
+  
+.section-title {
+    background-color:rgba(255, 255, 255, 0.2);
+}
+
+.about-me {
+    box-shadow: 2px 2px 2px 2px rgba(100, 100, 105, 0.5);
+    max-width: 45rem;
+    margin:auto;
+    background-color:rgba(255, 255, 255, 0.7);
+}
+a:hover {
+    text-decoration: none;
+    color:$link-hover-primary-color;
+    transition: 0.6s;
+    /* background-repeat: no-repeat;
+    background-size: 100% 0.2em;
+    background-position: 0 88%;
+    transition: background-size 0.25s ease-in; */
+  }
+  svg:hover {
+    text-decoration: none;
+    color: rgba(206, 100, 116, 1);
+    transition: 0.6s;
+  }
+  a:active {
+    color:#9DA39A
+  }

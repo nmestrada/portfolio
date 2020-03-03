@@ -6,11 +6,12 @@
  */
 
 import React from "react"
-import PropTypes from "prop-types"
+//import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Navbar from "./navbar"
-import "./layout.css"
+import Header from "./header"
+import "../stylesheets/layout.scss"
 
 import Container from 'react-bootstrap/Container'
 
@@ -26,23 +27,17 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <Container>
+    <Container fluid className="mx-0 px-0">
       <Navbar siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `auto`,
-          maxWidth: 960,
-          padding: `0px 1.0875rem 1.45rem`,
-          paddingTop: 0,
-        }}
-      >
+      <Header />
+      <Container className="main mx-auto">
         <main className="page-content">{children}</main>
+      </Container>
         <footer>
           <div className="footer">
             <span>© {new Date().getFullYear()} Natalie Estrada</span>
           </div>
         </footer>
-      </div>
     </Container>
   )
 }

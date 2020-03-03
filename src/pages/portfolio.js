@@ -9,7 +9,7 @@ import { FaGithub } from "react-icons/fa"
 import Fade from "react-reveal/Fade"
 //Components
 // import Video from "../components/Video"
-import {Card} from 'react-bootstrap'
+import {Card ,Image} from 'react-bootstrap'
 
 //styling
 import '../stylesheets/portfolio.css'
@@ -22,7 +22,7 @@ import weJay4 from "../images/weJay4.png"
 import plantify1 from "../images/plantify1.jpg"
 import plantify2 from "../images/plantify2.jpg"
 import plantify3 from "../images/plantify3.jpg"
-import plantify4 from "../images/plantify4.jpg"
+//import plantify4 from "../images/plantify4.jpg"
 
 const Portfolio = () => (
   <Layout>
@@ -31,32 +31,33 @@ const Portfolio = () => (
         <Card className="project weJay">
           <Fade bottom>
           <Card.Header className="section-title">
-            <h3 className="project-title">weJay</h3>
-            <h3 className="icons">
+            <h3 className="project-title">WeJay</h3>
+            <h4 className="icons">
               <a
                 href="https://github.com/weJayCapstone/weJay"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 Github <FaGithub/>
               </a>
-            </h3>
+            </h4>
           </Card.Header>
           <Card.Body className="section-content">
             <p>
-              Node.js, React Native, Expo SDK, Google Firestore, Spotify API
+              Built with: <strong>Node.js, React Native, Expo SDK, Redux, Google Firestore, Spotify API</strong>
+            </p>
+            <p>
+              A collaborative music mobile application. Users can vote on songs on a host's Spotify Playlist, creating an enjoyable music experience for all! 
             </p>
             <div className="images">
-              <img src={weJay1}></img>
-              <img src={weJay2}></img>
-              <img src={weJay3}></img>
-              <img src={weJay4}></img>
+              <img src={weJay1} alt="wejay"></img>
+              <img src={weJay2} alt="wejay"></img>
+              <img src={weJay3} alt="wejay"></img>
+              <img src={weJay4} alt="wejay"></img>
             </div>
-            <p>1 of 3 Full Stack Developers</p>
-            <p>
-              Was built to enhance party goers experience by helping them vote
-              on songs that would played next on the party playlist!
-            </p>
-            <p>Check our weJay video!</p>
+            <p> I was 1 of 3 Full Stack Developers who worked on this project.</p>
+            <p>Check out our weJay walkthrough <a href="https://www.youtube.com/watch?v=2NvC6te1Nak" target="_blank"
+                rel="noopener noreferrer">video</a> on youtube!</p>
         </Card.Body>
         </Fade>
         </Card>
@@ -64,10 +65,11 @@ const Portfolio = () => (
             <Fade bottom>
           <Card.Header className="section-title">
             <h3 className="project-title">BeerHopper</h3>
-            <h3 className="icons">
+            <h4 className="icons">
               <a
                 href="https://beerhopperfullstack.herokuapp.com/beers"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 Heroku Link{" "}
               </a>
@@ -75,20 +77,21 @@ const Portfolio = () => (
               <a
                 href="https://github.com/TeamForLoops/beerHopper"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 {" "}
                 Github <FaGithub />
               </a>
-            </h3>
+            </h4>
           </Card.Header>
           <Card.Body className="section-content">
-            <p>
-              Node.js, React, Redux, Sequelize, PostgreSQL, Express, React
-              Bootstrap
+            <p>Built with:
+              <strong> Node.js, React, Redux, Sequelize, PostgreSQL, Express, React, Stripe API, Passport,
+              React Bootstrap</strong>
             </p>
-            <img src={beerHopper1}></img>
-            <p>1 of 4 Full Stack Developers</p>
-            <p>An e-commerce site built in a week and half sprint</p>
+            <p>An e-commerce site built in a week and half sprint. Features include checkout with Stripe, filtering and searching products, sign in and sign up, and administrator access. This site is live! Please check it out at the Heroku link above!</p>
+            <Image src={beerHopper1} fluid/>
+            <p>I was 1 of 4 Full Stack Developers who worked on this project</p>
           </Card.Body>
           </Fade>
         </Card>
@@ -96,35 +99,37 @@ const Portfolio = () => (
             <Fade bottom>
           <Card.Header className="section-title">
             <h3 className="project-title">Plantify</h3>
-            <h3 className="icons">
+            <h4 className="icons">
               {" "}
               <a
                 href="https://github.com/nmestrada/Plantify"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 {" "}
                 Github <FaGithub />
               </a>
-            </h3>
+            </h4>
           </Card.Header>
           <Card.Body className="section-content">
-            <p>Node.js, React Native, Google Firestore, ExpoSDK, Clarfai API</p>
-            <div className="images">
-              <img src={plantify1}></img>
-              <img src={plantify2}></img>
-              <img src={plantify3}></img>
-            </div>
-            <p>Sole Developer</p>
+            <p> Built With: <strong>Node.js, React Native, Google Firestore, ExpoSDK, Clarfai API</strong></p>
             <p>
               A mobile application to help the user identify plants by taking a
-              photo
+              photo. For the plant enthusiasts out there just like me! 
             </p>
-            <p>Used API with a custom trained ML photo recognition API</p>
+            <p>Used custom trained Machine Learning photo recognition API to store images of plants I owned</p>
+            <div className="images">
+              <Image src={plantify1}/>
+              <Image src={plantify2}/>
+              <Image src={plantify3}/>
+            </div>
+            <p>I was the Sole Developer on this project</p>
           </Card.Body>
           </Fade>
         </Card>
+        <Link to="/">Home</Link>
     </div>
-    <Link to="/">Home</Link>
+    
   </Layout>
 )
 

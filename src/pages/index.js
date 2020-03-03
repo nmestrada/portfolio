@@ -8,9 +8,9 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import Fade from "react-reveal/Fade"
-import Container from 'react-bootstrap/Container'
+//import Container from 'react-bootstrap/Container'
 
-import '../stylesheets/index.css'
+import '../stylesheets/index.scss'
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -22,12 +22,14 @@ const IndexPage = ({ data }) => (
         </Card.Header>
         <Card.Body className="section-content">
           <p>
-            I started my career in customer service as a supervisor at
-            Starbucks. Now I'm looking to transition to Software Engineering.
+            I always been passionate about teaching myself web development. I started by building a blog during my free time working in customer service.
+            I have a background in studying Material Science in school and I've always had an interest in building and creating solutions that make people's lives easier. 
           </p>
           <p>My Skills include:</p>
           <ul>
+            <li>JavaScript, HTML, CSS</li>
             <li>React</li>
+            <li>React Native</li>
             <li>Redux</li>
             <li>Sequelize</li>
             <li>Node.js</li>
@@ -36,10 +38,10 @@ const IndexPage = ({ data }) => (
             <li>Restful APIs</li>
           </ul>
           <p>
-            I'm always up for learning new libraries, frameworks and languages.
+            I know that the best technologies for a project may not be in my skillset, but I eager to learn new frameworks and languages to build on my web development knowledge!
           </p>
-          <p>
-            My Hobbies include: Argentine Tango dancing, gardening and
+          <p>I also do things outside of coding! Some of my hobbies are:
+            Argentine Tango dancing, hiking, camping, gardening and
             watercolor painting
           </p>
         </Card.Body>

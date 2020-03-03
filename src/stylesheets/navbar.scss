@@ -1,0 +1,52 @@
+$primary-font: Mukta;
+$bg-color: #3D3A4B;
+$link-color: #D3C0CD;
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    color: $link-color;
+    /* offset-x | offset-y | blur-radius | color */
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+}
+.nav {
+    position: fixed;
+    padding-top: 0;
+    width: 100%;
+    top: 0;
+    background-color:$bg-color;
+    overflow: hidden;
+    z-index: 5;
+    margin:0;
+    color: $link-color;
+    font-size: 1.2rem;
+}
+.nav-link a{
+    color: $link-color;
+}
+.nav-link svg{
+    color: $link-color;
+}
+
+.links {
+    display:flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.links a {
+    margin: 0.4rem;
+    font-family: $primary-font;
+    color: $link-color;
+}
+
+@media (min-width: 992px) {
+.navbar, .nav{
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+}
+}

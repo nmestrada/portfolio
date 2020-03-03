@@ -1,34 +1,19 @@
-import { Link } from "gatsby"
+//import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import {Container, Image} from 'react-bootstrap'
+import headshot from "../images/headshoticon1.jpg"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
+import '../stylesheets/header.scss'
+
+const Header = () => (
+    <Container id="page-header" fluid className="my-4">
+        <Image className="headshot" src={headshot} roundedCircle/>
+        <div className="blurb my-4">
+            <h2 className="text-center">Natalie Estrada</h2>
+            <h3 className="text-center">Full Stack Software Engineer</h3>
+        </div>
+    </Container>
 )
 
 Header.propTypes = {
