@@ -23,19 +23,22 @@ const IndexPage = ({ data }) => (
         <Card.Body className="section-content">
           <p>
             I always been passionate about teaching myself web development. I started by building a blog during my free time working in customer service.
-            I have a background in studying Material Science in school and I've always had an interest in building and creating solutions that make people's lives easier. 
+            I have a background in studying Materials Science Engineering in school and I've always had an interest in building and creating solutions that make people's lives easier. 
           </p>
           <p>My Skills include:</p>
           <ul>
             <li>JavaScript, HTML, CSS</li>
-            <li>React</li>
-            <li>React Native</li>
+            <li>React, React Native</li>
             <li>Redux</li>
             <li>Sequelize</li>
             <li>Node.js</li>
             <li>Express</li>
             <li>PostgreSQL</li>
             <li>Restful APIs</li>
+            <li>Heroku</li>
+            <li>TDD : Mocha, Chai, Jasmine</li>
+            <li>Travis CI</li>
+            <li>Git, Github</li>
           </ul>
           <p>
             I know that the best technologies for a project may not be in my skillset, but I eager to learn new frameworks and languages to build on my web development knowledge!
