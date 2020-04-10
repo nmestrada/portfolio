@@ -23,7 +23,7 @@ const IndexPage = ({ data }) => (
         <Card.Body className="section-content">
           <p>
             I always been passionate about teaching myself web development. I started by building a blog during my free time working in customer service.
-            I have a background in studying Materials Science Engineering in school and I've always had an interest in building and creating solutions that make people's lives easier. 
+            I have a background studying Materials Science Engineering at University of Michigan and I've always had an interest in building and creating solutions that make people's lives easier. 
           </p>
           <p>My Skills include:</p>
           <ul>
