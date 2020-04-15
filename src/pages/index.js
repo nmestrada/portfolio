@@ -1,26 +1,21 @@
 import React from "react"
 //import { Link, graphql } from "gatsby"
-//bootstrap import
-import 'bootstrap/dist/css/bootstrap.min.css';
-import {Card} from 'react-bootstrap'
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-import Fade from "react-reveal/Fade"
-//import Container from 'react-bootstrap/Container'
-
-import '../stylesheets/index.scss'
+//materialize imports
+import { Card, CardTitle } from 'react-materialize';
+import 'materialize-css/dist/css/materialize.min.css'
 
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" />
     <Card className="about-me border-0">
-      <Fade bottom>
-        <Card.Header className="section-title border-0">
+        <div className="section-title border-0">
           <h4>About Me</h4>
-        </Card.Header>
-        <Card.Body className="section-content">
+        </div>
+        <div className="section-content">
           <p>
             I always been passionate about teaching myself web development. I started by building a blog during my free time working in customer service.
             I have a background studying Materials Science Engineering at University of Michigan and I've always had an interest in building and creating solutions that make people's lives easier. 
@@ -47,8 +42,7 @@ const IndexPage = ({ data }) => (
             Argentine Tango dancing, hiking, camping, gardening and
             watercolor painting
           </p>
-        </Card.Body>
-      </Fade>
+        </div>
     </Card>
   </Layout>
 )

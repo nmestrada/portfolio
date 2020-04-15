@@ -1,38 +1,34 @@
 import React from "react"
 import { Link } from "gatsby"
-//import PropTypes from "prop-types"
 import { FaGithub, FaLinkedin } from "react-icons/fa"
-import Navbar from 'react-bootstrap/Navbar'
-
-import  {Nav} from 'react-bootstrap'
-
-import '../stylesheets/navbar.scss';
-
+//should not use materialize incorrectly scales
 export default function Navb() {
   return (
-      <Navbar className="nav"
-        sticky="top"
-        fixed="top" 
-        variant="dark"
-      >
-        <Nav className="links m-auto">
-            <Nav.Item>
+    <div className="navbar-fixed">
+      <nav>
+        <div className="nav-wrapper">
+            <Link className="brand-logo center" to="/">NE</Link>
+            <ul id="nav-mobile" className="right hide-on-med-and-down">
+                <li>
                 <Link to="/">About</Link>
-            </Nav.Item>
-            <Nav.Item >
+                </li>
+                <li>
                 <Link to="portfolio">Portfolio</Link>
-            </Nav.Item>
-            <Nav.Link href="https://github.com/nmestrada">
-                <FaGithub />
-            </Nav.Link>
-          
-          <Nav.Link
-            href="https://www.linkedin.com/in/natalie-estrada-dev/"
-          >
-            <FaLinkedin />
-          </Nav.Link>
-        </Nav>
-      </Navbar>
+                </li>
+                <li>
+                    <a href="https://github.com/nmestrada">
+                    <FaGithub />
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/natalie-estrada-dev/">
+                        <FaLinkedin />
+                    </a>
+                </li>
+          </ul>
+        </div>
+      </nav>
+      </div>
   )
 }
 

@@ -1,19 +1,25 @@
 //import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import {Container, Image} from 'react-bootstrap'
 import headshot from "../images/headshoticon1.jpg"
 
-import '../stylesheets/header.scss'
 
 const Header = () => (
-    <Container id="page-header" fluid >
-        <Image className="headshot" src={headshot} roundedCircle/>
-        <div className="blurb my-4">
-            <h2 className="text-center">Natalie Estrada</h2>
-            <h3 className="text-center">Full Stack Software Engineer</h3>
+    <div className="row center-align">
+        <div className="col s4 offset-s4">
+            <div className="card horizontal" >
+                <div className="card-stacked valign-wrapper">
+                    <div className="card-content left-align"> 
+                        <h5>Natalie Estrada</h5>
+                        <p>Full Stack Software Engineer</p>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <img className="circle" alt="headshot"src={headshot}/>
+                </div>
+            </div>
         </div>
-    </Container>
+    </div>
 )
 
 Header.propTypes = {
