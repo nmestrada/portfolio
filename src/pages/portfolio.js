@@ -9,7 +9,7 @@ import { FaGithub } from "react-icons/fa"
 import Fade from "react-reveal/Fade"
 //Components
 // import Video from "../components/Video"
-import {Card ,Image} from 'react-bootstrap'
+import {Item} from 'semantic-ui-react'
 
 //styling
 import '../stylesheets/portfolio.css'
@@ -27,10 +27,10 @@ import plantify3 from "../images/plantify3.jpg"
 const Portfolio = () => (
   <Layout>
     {/* <SEO title="Home" /> */}
-    <div className="projects-container">
-        <Card className="project weJay">
-          <Fade bottom>
-          <Card.Header className="section-title">
+    <Item.Group className="projects-container">
+        <Item className="project weJay">
+          <Item.Content>
+          <Item.Header className="section-title">
             <h3 className="project-title">WeJay</h3>
             <h4 className="icons">
               <a
@@ -41,8 +41,8 @@ const Portfolio = () => (
                 Github <FaGithub/>
               </a>
             </h4>
-          </Card.Header>
-          <Card.Body className="section-content">
+          </Item.Header>
+          <Item.Description className="section-content">
             <p>
               Built with: <strong>Node.js, React Native, Expo SDK, Redux, Google Firestore, Spotify API</strong>
             </p>
@@ -58,12 +58,12 @@ const Portfolio = () => (
             <p> I was 1 of 3 Full Stack Developers who worked on this project.</p>
             <p>Check out our weJay walkthrough <a href="https://www.youtube.com/watch?v=2NvC6te1Nak" target="_blank"
                 rel="noopener noreferrer">video</a> on youtube!</p>
-        </Card.Body>
-        </Fade>
-        </Card>
-        <Card className="project beerHopper">
-            <Fade bottom>
-          <Card.Header className="section-title">
+        </Item.Description>
+        </Item.Content>
+        </Item>
+        <Item className="project beerHopper">
+            <Item.Content>
+          <Item.Header className="section-title">
             <h3 className="project-title">BeerHopper</h3>
             <h4 className="icons">
               <a
@@ -83,21 +83,21 @@ const Portfolio = () => (
                 Github <FaGithub />
               </a>
             </h4>
-          </Card.Header>
-          <Card.Body className="section-content">
+          </Item.Header>
+          <Item.Description className="section-content">
             <p>Built with:
               <strong> Node.js, React, Redux, Sequelize, PostgreSQL, Express, React, Stripe API, Passport,
               React Bootstrap</strong>
             </p>
             <p>An e-commerce site built in a week and half sprint. Features include checkout with Stripe, filtering and searching products, sign in and sign up, and administrator access. This site is live! Please check it out at the Heroku link above!</p>
-            <Image src={beerHopper1} fluid/>
+            <Item.Image src={beerHopper1} />
             <p>I was 1 of 4 Full Stack Developers who worked on this project</p>
-          </Card.Body>
-          </Fade>
-        </Card>
-        <Card className="project plantify">
-            <Fade bottom>
-          <Card.Header className="section-title">
+          </Item.Description>
+          </Item.Content>
+        </Item>
+        <Item className="project plantify">
+            <Item.Content>
+          <Item.Header className="section-title">
             <h3 className="project-title">Plantify</h3>
             <h4 className="icons">
               {" "}
@@ -110,8 +110,8 @@ const Portfolio = () => (
                 Github <FaGithub />
               </a>
             </h4>
-          </Card.Header>
-          <Card.Body className="section-content">
+          </Item.Header>
+          <Item.Description className="section-content">
             <p> Built With: <strong>Node.js, React Native, Google Firestore, ExpoSDK, Clarfai API</strong></p>
             <p>
               A mobile application to help the user identify plants by taking a
@@ -119,16 +119,16 @@ const Portfolio = () => (
             </p>
             <p>Used custom trained Machine Learning photo recognition API to store images of plants I owned</p>
             <div className="images">
-              <Image src={plantify1}/>
-              <Image src={plantify2}/>
-              <Image src={plantify3}/>
+              <Item.Image src={plantify1}/>
+              <Item.Image src={plantify2}/>
+              <Item.Image src={plantify3}/>
             </div>
             <p>I was the Sole Developer on this project</p>
-          </Card.Body>
-          </Fade>
-        </Card>
+          </Item.Description>
+          </Item.Content>
+        </Item>
         <Link to="/">Home</Link>
-    </div>
+    </Item.Group>
     
   </Layout>
 )

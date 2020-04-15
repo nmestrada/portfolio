@@ -10,10 +10,8 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Navbar from "./navbar"
-import Header from "./header"
-import "../stylesheets/layout.scss"
 
-import Container from 'react-bootstrap/Container'
+import {Container} from 'semantic-ui-react'
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -29,7 +27,6 @@ const Layout = ({ children }) => {
   return (
     <Container fluid className="mx-0 px-0">
       <Navbar siteTitle={data.site.siteMetadata.title} />
-      <Header />
       <Container className="main mx-auto">
         <main className="page-content">{children}</main>
       </Container>
