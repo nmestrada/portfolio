@@ -5,11 +5,9 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 //import SEO from "../components/seo"
 //Effects
-import { DiHeroku } from "react-icons/di";
-import Fade from "react-reveal/Fade"
+
 //Components
-// import Video from "../components/Video"
-import {Item, Button, Icon} from 'semantic-ui-react'
+import {Item, Button, Icon, Grid, Image, Header} from 'semantic-ui-react'
 
 //styling
 import '../stylesheets/portfolio.css'
@@ -27,47 +25,51 @@ import plantify3 from "../images/plantify3.jpg"
 const Portfolio = () => (
   <Layout>
     {/* <SEO title="Home" /> */}
-    <Item.Group className="projects-container">
-        <Item className="project weJay">
+    <Grid className="projects-container" as={Item.Group}columns={2} divided >
+        <Item className="project weJay" >
           <Item.Content>
-          <Item.Header className="section-title">
-            <h3 className="project-title">WeJay</h3>
-            <h4 className="icons">
-              <a
-                href="https://github.com/weJayCapstone/weJay"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button color='teal'>
-                    <Icon name="github"/>Github
-                </Button>
-              </a>
-            </h4>
+          <Item.Header
+          className="section-title"
+          as={Grid}
+          >
+                WeJay
+                <a 
+                    href="https://github.com/weJayCapstone/weJay"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <Button  
+                        color='teal'
+                    >
+                        <Icon name="github"/>Github
+                    </Button>
+                </a>
           </Item.Header>
-          <Item.Description className="section-content">
+          <div className="section-content">
             <p>
               Built with: <strong>Node.js, React Native, Expo SDK, Redux, Google Firestore, Spotify API</strong>
             </p>
             <p>
               A collaborative music mobile application. Users can vote on songs on a host's Spotify Playlist, creating an enjoyable music experience for all! 
             </p>
-            <div className="images">
-              <img src={weJay1} alt="wejay"></img>
-              <img src={weJay2} alt="wejay"></img>
-              <img src={weJay3} alt="wejay"></img>
-              <img src={weJay4} alt="wejay"></img>
-            </div>
+            
             <p> I was 1 of 3 Full Stack Developers who worked on this project.</p>
             <p>Check out our weJay walkthrough <a href="https://www.youtube.com/watch?v=2NvC6te1Nak" target="_blank"
                 rel="noopener noreferrer">video</a> on youtube!</p>
-        </Item.Description>
+        </div>
         </Item.Content>
+        <Image.Group className="images" size='small'>
+              <Image src={weJay1} alt="wejay"/>
+              <Image src={weJay2} alt="wejay"/>
+              <Image src={weJay3} alt="wejay"/>
+              <Image src={weJay4} alt="wejay"/>
+        </Image.Group>
         </Item>
         <Item className="project beerHopper">
+        <Item.Image src={beerHopper1} size="large"/>
             <Item.Content>
-          <Item.Header className="section-title">
-            <h3 className="project-title">BeerHopper</h3>
-            <h4 className="icons">
+          <Item.Header className="section-title" as={Grid}>
+            BeerHopper
               <a
                 href="https://beerhopperfullstack.herokuapp.com/beers"
                 target="_blank"
@@ -85,7 +87,6 @@ const Portfolio = () => (
                     <Icon name="github"/>Github
                 </Button>
               </a>
-            </h4>
           </Item.Header>
           <Item.Description className="section-content">
             <p>Built with:
@@ -93,17 +94,15 @@ const Portfolio = () => (
               React Bootstrap</strong>
             </p>
             <p>An e-commerce site built in a week and half sprint. Features include checkout with Stripe, filtering and searching products, sign in and sign up, and administrator access. This site is live! Please check it out at the Heroku link above!</p>
-            <Item.Image src={beerHopper1} />
+            
             <p>I was 1 of 4 Full Stack Developers who worked on this project</p>
           </Item.Description>
           </Item.Content>
         </Item>
         <Item className="project plantify">
             <Item.Content>
-          <Item.Header className="section-title">
-            <h3 className="project-title">Plantify</h3>
-            <h4 className="icons">
-              {" "}
+          <Item.Header className="section-title" as={Grid}>
+            Plantify
               <a
                 href="https://github.com/nmestrada/Plantify"
                 target="_blank"
@@ -113,7 +112,6 @@ const Portfolio = () => (
                     <Icon name="github"/>Github
                 </Button>
               </a>
-            </h4>
           </Item.Header>
           <Item.Description className="section-content">
             <p> Built With: <strong>Node.js, React Native, Google Firestore, ExpoSDK, Clarfai API</strong></p>
@@ -122,17 +120,18 @@ const Portfolio = () => (
               photo. For the plant enthusiasts out there just like me! 
             </p>
             <p>Used custom trained Machine Learning photo recognition API to store images of plants I owned</p>
-            <div className="images">
-              <Item.Image src={plantify1}/>
-              <Item.Image src={plantify2}/>
-              <Item.Image src={plantify3}/>
-            </div>
+            
             <p>I was the Sole Developer on this project</p>
           </Item.Description>
           </Item.Content>
+          <Image.Group size="small" className="images">
+              <Item.Image src={plantify1}/>
+              <Item.Image src={plantify2}/>
+              <Item.Image src={plantify3}/>
+            </Image.Group>
         </Item>
         <Link to="/">Home</Link>
-    </Item.Group>
+    </Grid>
     
   </Layout>
 )

@@ -10,7 +10,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Navbar from "./navbar"
-
+import Footer from './footer'
 import {Container} from 'semantic-ui-react'
 import './layout.css'
 
@@ -27,15 +27,11 @@ const Layout = ({ children }) => {
 
   return (
     <Container fluid className="mx-0 px-0">
-      <Navbar siteTitle={data.site.siteMetadata.title} />
+      <Navbar/>
       <Container className="main">
         <main className="page-content">{children}</main>
       </Container>
-        <footer>
-          <div className="footer">
-            <span>© {new Date().getFullYear()} Natalie Estrada</span>
-          </div>
-        </footer>
+        <Footer/>
     </Container>
   )
 }
