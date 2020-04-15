@@ -5,11 +5,11 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 //import SEO from "../components/seo"
 //Effects
-import { FaGithub } from "react-icons/fa"
+import { DiHeroku } from "react-icons/di";
 import Fade from "react-reveal/Fade"
 //Components
 // import Video from "../components/Video"
-import {Item} from 'semantic-ui-react'
+import {Item, Button, Icon} from 'semantic-ui-react'
 
 //styling
 import '../stylesheets/portfolio.css'
@@ -38,7 +38,9 @@ const Portfolio = () => (
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Github <FaGithub/>
+                <Button color='teal'>
+                    <Icon name="github"/>Github
+                </Button>
               </a>
             </h4>
           </Item.Header>
@@ -71,16 +73,17 @@ const Portfolio = () => (
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Heroku Link{" "}
+                <Button color='purple'> Heroku
+                </Button>
               </a>
-              -
               <a
                 href="https://github.com/TeamForLoops/beerHopper"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                {" "}
-                Github <FaGithub />
+                <Button color='teal'>
+                    <Icon name="github"/>Github
+                </Button>
               </a>
             </h4>
           </Item.Header>
@@ -106,8 +109,9 @@ const Portfolio = () => (
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                {" "}
-                Github <FaGithub />
+                <Button color='teal'>
+                    <Icon name="github"/>Github
+                </Button>
               </a>
             </h4>
           </Item.Header>
