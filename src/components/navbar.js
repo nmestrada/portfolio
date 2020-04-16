@@ -1,13 +1,11 @@
 import React from "react"
 import { Link } from "gatsby"
-//import PropTypes from "prop-types"
-import { FaGithub, FaLinkedin } from "react-icons/fa"
 import {Menu, Responsive, Icon} from 'semantic-ui-react'
 
 export default function Navb() {
   return (
       <>
-      <Responsive
+      {/* <Responsive
         as={Menu}
         icon='labeled' 
         fluid widths={4} 
@@ -39,14 +37,13 @@ export default function Navb() {
             <FaLinkedin />
             </a>
         </Menu.Item>
-      </Responsive>
+      </Responsive> */}
       <Responsive
       borderless
       as={Menu}
       icon='labeled' 
       widths={5} 
       fixed='top' 
-      minWidth={Responsive.onlyComputer.minWidth}
     >
             
             <Menu.Menu>
