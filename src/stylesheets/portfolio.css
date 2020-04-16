@@ -13,6 +13,13 @@ img {
     white-space: nowrap;
     justify-content: space-between;
 }
+.ui.items>.item>.content {
+    display:grid;
+}
+.ui.items>.item>.image+.content {
+    display:grid;
+    margin-left: 2rem;
+}
 /* a:hover {
     color: lightseagreen;
     text-decoration: none;

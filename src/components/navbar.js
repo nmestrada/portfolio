@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 //import PropTypes from "prop-types"
 import { FaGithub, FaLinkedin } from "react-icons/fa"
-import {Menu, Responsive, Icon, Header} from 'semantic-ui-react'
+import {Menu, Responsive, Icon} from 'semantic-ui-react'
 
 export default function Navb() {
   return (
@@ -66,13 +66,18 @@ export default function Navb() {
                 to="portfolio"
             />
             <Menu.Item>
-                <a href="https://github.com/nmestrada">
+                <a href="https://github.com/nmestrada"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
                 <Icon size="large" color="black" name='github'/>
                 </a>
             </Menu.Item>
             
             <Menu.Item>
                 <a href="https://www.linkedin.com/in/natalie-estrada-dev/"
+                    target="_blank"
+                    rel="noopener noreferrer"
                 >
                 <Icon size="large" color="black" name='linkedin'/>
                 </a>

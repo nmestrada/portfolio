@@ -1,13 +1,9 @@
 
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-//import SEO from "../components/seo"
-//Effects
-
 //Components
-import {Item, Button, Icon, Grid, Image, Header} from 'semantic-ui-react'
+import {Item, Button, Icon, Grid, Image} from 'semantic-ui-react'
 
 //styling
 import '../stylesheets/portfolio.css'
@@ -20,7 +16,6 @@ import weJay4 from "../images/weJay4.png"
 import plantify1 from "../images/plantify1.jpg"
 import plantify2 from "../images/plantify2.jpg"
 import plantify3 from "../images/plantify3.jpg"
-//import plantify4 from "../images/plantify4.jpg"
 
 const Portfolio = () => (
   <Layout>
@@ -67,7 +62,7 @@ const Portfolio = () => (
         </Item>
         <Item className="project beerHopper">
         <Item.Image src={beerHopper1} size="large"/>
-            <Item.Content>
+        <Item.Content >
           <Item.Header className="section-title" as={Grid}>
             BeerHopper
               <a
@@ -100,7 +95,7 @@ const Portfolio = () => (
           </Item.Content>
         </Item>
         <Item className="project plantify">
-            <Item.Content>
+            <Item.Content verticalAlign='middle'>
           <Item.Header className="section-title" as={Grid}>
             Plantify
               <a
@@ -130,7 +125,6 @@ const Portfolio = () => (
               <Item.Image src={plantify3}/>
             </Image.Group>
         </Item>
-        <Link to="/">Home</Link>
     </Grid>
     
   </Layout>
