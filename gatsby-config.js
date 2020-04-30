@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: `Natalie Estrada`,
-    description: `Full Stack Software Engineer`,
-    author: `@NatalieEstrada`,
+    description: `Natalie Estrada portfolio page`,
+    author: `@Chakrasandwhich`,
+    image: `src/images/seedling.png`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
