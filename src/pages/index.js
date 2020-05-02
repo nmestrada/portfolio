@@ -1,19 +1,48 @@
 import React from "react"
-//import { Link, graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 import 'semantic-ui-css/semantic.min.css'
 import {Item, Label, List} from 'semantic-ui-react'
+import Img from 'gatsby-image';
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Header from "../components/header"
-import headshot from "../images/headshoticon1.jpg"
-const IndexPage = () => (
+//import headshot from "../images/headshoticon1.jpg"
+
+//query from docs
+export const squareImage = graphql`
+fragment squareImage on File {
+    childImageSharp {
+      fixed(height:140, width:140) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+  }
+  `
+//actual query
+export const query = graphql`
+  query {
+    headshot: file(relativePath: { eq: "headshoticon1.jpg" }) {
+      ...squareImage
+    }
+  }
+`
+const IndexPage = () => {
+    const data = useStaticQuery(query);
+    console.log(data)
+    return (
   <Layout>
     <SEO title="Home" />
     <Header/>
     <Item.Group>
     <Item>
-    <Item.Image src={headshot} floated='right' ui='true'/>
+    <Item.Image 
+        floated="right"
+        >
+            <Img 
+                fixed={data.headshot.childImageSharp.fixed} 
+            />
+    </Item.Image>
         <Item.Content verticalAlign='middle'>
             <Item.Header> 
             About
@@ -74,5 +103,6 @@ const IndexPage = () => (
     </Item.Group>
   </Layout>
 )
+}
 
 export default IndexPage
