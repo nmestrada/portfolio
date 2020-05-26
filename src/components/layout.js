@@ -8,7 +8,7 @@ import "../css/index.css"
 const Layout = ({ children }) => {
 
   return (
-    <div className='container mx-0'>
+    <div className='container mx-0 max-w-full'>
       <Navbar/>
       <div className="main">
         <main className="page-content">{children}</main>
