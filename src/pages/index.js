@@ -6,7 +6,7 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Header from '../components/header'
 
-//query from docs
+// //query from docs
 // export const squareImage = graphql`
 //   fragment squareImage on File {
 //     childImageSharp {

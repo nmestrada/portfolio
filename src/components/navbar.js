@@ -1,44 +1,45 @@
 import React from "react"
 import { Link } from "gatsby"
+import {FiGithub} from 'react-icons/fi'
+import {AiOutlineLinkedin} from 'react-icons/ai'
+import {FaTerminal} from 'react-icons/fa'
 
 export default function Navb() {
   return (
-      <div>      
-          Navbar
-            {/* <Menu.Menu>
-            <Menu.Item position="left" header>
-                <Icon color="grey" size="mini" name="terminal"/> 
-            </Menu.Item>
-            <Menu.Item
-            name="About"
-            activeClassName="active"
-            as={Link}
-            to="/"
-            />
-            <Menu.Item
-                name="Portfolio"
-                activeClassName="active"
-                as = {Link}
+      <div className="flex items-center justify-between flex-wrap bg-teal-500 p-6">  
+            <div className="flex items-center">
+                <FaTerminal/> NE
+            </div>
+            <div className="flex items-center">   
+            <Link
+            className="active"
+            to="/">
+            About 
+            </Link>
+            <Link
+                className="active"
                 to="portfolio"
-            />
-            <Menu.Item>
+            >
+                Portfolio
+            </Link>
+            <Link>
                 <a href="https://github.com/nmestrada"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                <Icon size="large" color="black" name='github'/>
+                <FiGithub/>
                 </a>
-            </Menu.Item>
+            </Link>
             
-            <Menu.Item>
+            <Link>
                 <a href="https://www.linkedin.com/in/natalie-estrada-dev/"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                <Icon size="large" color="black" name='linkedin'/>
+                <AiOutlineLinkedin/>
                 </a>
-            </Menu.Item>
-            </Menu.Menu> */}
+            </Link>
+            </div> 
     </div>
   )
 }
